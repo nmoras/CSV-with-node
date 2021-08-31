@@ -2,13 +2,13 @@ var fs = require('fs');
 var parse = require('csv-parse');
 let homeKeywords;
 let keywordList;
-var parser = parse(function (err, records) {
-	//console.log(records[1][0]);
+var parser = parse({columns: true}, function (err, records) {
+	//console.log(records);
     //keywordList = records.map( x => x[1])
     //console.log(keywordList)
 
     homeKeywords = records.filter( x => {
-        if (x[1] >= 10){
+        if (x.Volume >= 10){
             return x;
         } 
     })
@@ -17,3 +17,7 @@ var parser = parse(function (err, records) {
 
 
 fs.createReadStream(__dirname+'/vacation_home_rentals.csv').pipe(parser);
+fs.writeFile(__dirname+'/someData.csv', homeKeywords, (err) => {
+    if(err) throw err;
+    console.log('the file has been saved')
+});
