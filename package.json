@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/nmoras/CSV-with-node#readme",
   "dependencies": {
+    "csv": "^5.5.2",
     "csv-parse": "^4.16.2",
-    "node-csv": "^0.1.2"
+    "csv-writer": "^1.6.0",
+    "node-csv": "^0.1.2",
+    "writer": "^1.0.0"
   }
 }
