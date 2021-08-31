@@ -7,8 +7,8 @@ var parser = parse(function (err, records) {
     //keywordList = records.map( x => x[1])
     //console.log(keywordList)
 
-    homeKeywords = records.map( x => {
-        if (x[1] >= 200){
+    homeKeywords = records.filter( x => {
+        if (x[1] >= 10){
             return x;
         } 
     })
