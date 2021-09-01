@@ -45,3 +45,4 @@ const csvWriter = createCsvWriter({
   .catch(() => console.log('The CSV is not printed'))
 
 //https://www.codegrepper.com/code-examples/javascript/write+array+to+csv+nodejs
+//https://www.freecodecamp.org/news/how-to-write-a-javascript-promise-4ed8d44292b8/
